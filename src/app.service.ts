@@ -6,7 +6,7 @@ export class AppService {
     return 'Hello World!';
   }
 
-  getItemsArray() {
+  getItemsArray(): any {
     return [
       { idFacade: 'resh_blue', idMaterial: 'mdf', idCover: 'pet' },
       { idFacade: 'resh_white', idMaterial: 'mdf', idCover: 'pet' },

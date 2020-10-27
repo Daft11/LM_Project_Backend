@@ -11,7 +11,7 @@ export class AppController {
   }
 
   @Get('getItemsArray')
-  getItemsArray() {
+  getItemsArray(): any {
     return this.appService.getItemsArray();
   }
 
