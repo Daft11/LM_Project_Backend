@@ -1,4 +1,4 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, Post, Body} from '@nestjs/common';
 import { AppService } from './app.service';
 
 @Controller()
@@ -13,6 +13,14 @@ export class AppController {
   @Get('getItemsArray')
   getItemsArray(): any {
     return this.appService.getItemsArray();
+  }
+
+  @Post('permutation')
+  permutation(
+    @Body('length') len: number,
+    @Body('sizes') sizes: object
+    ): any{
+    return this.appService.calc(len, sizes);
   }
 
 
