@@ -12,7 +12,12 @@ export class AppController {
 
   @Get('getItemsArray')
   getItemsArray(): any {
-    return this.appService.getItemsArray();
+    return this.appService.itemsArray();
+  }
+
+  @Get('getFramesInfo')
+  getframesInfo(): any {
+    return this.appService.framesInfo();
   }
 
   @Post('permutation')
